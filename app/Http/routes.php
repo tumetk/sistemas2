@@ -11,7 +11,9 @@
 |
 */
 
-
+Route::get('/',function(){
+	return view('welcome');
+});
 
 
 Route::post('/buy/{cart}',['as'=>'buy','namespace'=>'Front', 'uses'=> 'SalesController@buyProducts']);

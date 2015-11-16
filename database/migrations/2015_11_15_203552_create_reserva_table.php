@@ -17,7 +17,7 @@ class CreateReservaTable extends Migration
             $table->timestamps();
             $table->datetime('fecha_hora');
             $table->integer('cliente_id')->nullable()->unsigned();
-            $table->int('confirmada');
+            $table->integer('confirmada');
         });
 
         Schema::table('reservas', function(Blueprint $table){

@@ -16,6 +16,7 @@ class CreateAlmacenTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->float('precio');
+            $table->integer('stock');
             $table->integer('producto_id')->nullable()->unsigned();
             $table->integer('proveedor_id')->nullable()->unsigned();
 

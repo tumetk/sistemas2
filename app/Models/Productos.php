@@ -4,9 +4,9 @@ namespace App\Models;
 
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Productos;
+use App\Models\Pedidos;
 
-class Proveedores extends Model 
+class Productos extends Model 
 {
     
 
@@ -15,7 +15,7 @@ class Proveedores extends Model
      *
      * @var string
      */
-    protected $table = 'proveedores';
+    protected $table = 'productos';
 
     /**
      * The attributes that are mass assignable.
@@ -24,8 +24,10 @@ class Proveedores extends Model
      */
     protected $fillable = ['descripcion'];
 
-    public function productos()
+    
+
+    public function proveedores()
     {
-        return $this->belongsToMany(Productos::class,'almacen','proveedor_id','producto_id')->withPivot('stock')->withTimestamps();
-    }
-}
+        return $this->belongsToMany(Proveedores::class,'almacen','producto_id','proveedor_id')->withPivot('precio','stock')->withTimestamps();
+    } 
+}  

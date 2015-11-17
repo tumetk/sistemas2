@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDocumentoPagoTable extends Migration
+class CreateReservaCitasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,33 +12,22 @@ class CreateDocumentoPagoTable extends Migration
      */
     public function up()
     {
-        Schema::create('documento_pago', function (Blueprint $table) {
+        Schema::create('reserva_citas', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->float('igv');
-            $table->float('subtotal');
-            $table->float('total');
             $table->integer('reserva_id')->nullable()->unsigned();
-            $table->integer('pedido_id')->nullable()->unsigned();
-            $table->integer('cliente_id')->nullable()->unsigned();
-
+            $table->integer('cita_id')->nullable()->unsigned();
         });
 
-
-        Schema::table('documento_pago', function(Blueprint $table){
+        Schema::table('reserva_citas', function(Blueprint $table){
             $table->foreign('reserva_id')
                   ->references('id')
                   ->on('reservas')
                   ->onDelete('set null')
                   ->onUpdate('cascade');
-            $table->foreign('pedido_id')
+            $table->foreign('cita_id')
                   ->references('id')
-                  ->on('pedidos')
-                  ->onDelete('set null')
-                  ->onUpdate('cascade');
-            $table->foreign('cliente_id')
-                  ->references('id')
-                  ->on('cliente')
+                  ->on('citas')
                   ->onDelete('set null')
                   ->onUpdate('cascade');
         });
@@ -51,7 +40,6 @@ class CreateDocumentoPagoTable extends Migration
      */
     public function down()
     {
-        
-        Schema::drop('documento_pago');
+        Schema::drop('reserva_citas');
     }
 }

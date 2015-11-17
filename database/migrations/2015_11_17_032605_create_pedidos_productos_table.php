@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDocumentoPagoTable extends Migration
+class CreatePedidosProductosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,33 +12,24 @@ class CreateDocumentoPagoTable extends Migration
      */
     public function up()
     {
-        Schema::create('documento_pago', function (Blueprint $table) {
+        Schema::create('pedidos_productos_almacen', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->float('igv');
-            $table->float('subtotal');
-            $table->float('total');
-            $table->integer('reserva_id')->nullable()->unsigned();
+            $table->integer('producto_almacen_id')->nullable()->unsigned();
             $table->integer('pedido_id')->nullable()->unsigned();
-            $table->integer('cliente_id')->nullable()->unsigned();
-
+            $table->integer('cantidad');
+            $table->float('total');
         });
 
-
-        Schema::table('documento_pago', function(Blueprint $table){
-            $table->foreign('reserva_id')
+        Schema::table('pedidos_productos_almacen',function(Blueprint $table){
+            $table->foreign('producto_almacen_id')
                   ->references('id')
-                  ->on('reservas')
+                  ->on('almacen')
                   ->onDelete('set null')
                   ->onUpdate('cascade');
             $table->foreign('pedido_id')
                   ->references('id')
                   ->on('pedidos')
-                  ->onDelete('set null')
-                  ->onUpdate('cascade');
-            $table->foreign('cliente_id')
-                  ->references('id')
-                  ->on('cliente')
                   ->onDelete('set null')
                   ->onUpdate('cascade');
         });
@@ -51,7 +42,9 @@ class CreateDocumentoPagoTable extends Migration
      */
     public function down()
     {
-        
-        Schema::drop('documento_pago');
+        Schema::table('pedidos_productos_almacen', function(Blueprint $table){
+            $table->dropForeign('pedidos_productos_almacen_producto_id_foreign');
+        });
+        Schema::drop('pedidos_productos_almacen');
     }
 }

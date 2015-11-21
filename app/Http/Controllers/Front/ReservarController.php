@@ -38,19 +38,46 @@ class ReservarController extends Controller
         return view('servicios.index',$data);
     }
 
-    public function select($id)
+    public function agregarServicio($id_servicio)
     {
-    	$servicio = Servicios::find($id);
-    	$data = [
-            'session_user' => $this->SessionUser,
-            'servicios' => $servicio,
-        ];
-       return view('servicios.select',$data);
+        $cotizacion = Cotizaciones::where('observaciones','like','sin finalizar')->where('cliente_id',1)->first();
+
+        if($cotizacion == null){
+        	$cotizacion = Cotizaciones::create([
+        			'cliente_id' => 1 ,
+        			'observaciones' =>'sin finalizar'
+        		]);
+        }
+
+       $cotizacion->servicios()->attach($id_servicio);
+
+       return redirect()->route('cotizar')->with('exito','Servicio agregado a cotizacion correctamente');
     }
 
-    public function reservar(Request $request)
+    
+
+    public function confirmarCotizacion()
     {
-    	
+    	$cotizacion = Cotizaciones::with('servicios')->where('observaciones','like','sin finalizar')->where('cliente_id',1)->first();
+
+    	$cotizacion->observaciones = 'finalizada';
+    	$total = 0 ;
+    	foreach ($cotizacion['servicios'] as $servicio) {
+    		$total += $servicio['precio'];
+    	}
+    	$data= [
+    		'session_user' =>$this->SessionUser,
+    		'total'        => $total,
+    		'cotizacion'   => $cotizacion,
+    	];
+
+    	return view('servicios.confirmar',$data);
+
+
     }
 
+    public function finCotizacion()
+    {
+    	return redirect()->route('cotizar')->with('fin','Has confirmado tu cotizacion se te llamara para poder reservar una cita proximamente');
+    }
 }

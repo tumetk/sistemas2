@@ -46,6 +46,10 @@ Route::group(['prefix'=> 'reportes','namespace' =>'Back'],function(){
 
 Route::group(['prefix'=>'cotizar','namespace'=>'Front'],function(){
 	Route::get('/',['as'=>'cotizar','uses'=>'ReservarController@index']);
+	Route::get('/confirmar',['as'=>'cotizar.confirmar','uses'=>'ReservarController@confirmarCotizacion']);
+	Route::get('/finalizar',['as'=>'cotizar.finalizar','uses'=>'ReservarController@finCotizacion']);
+	Route::post('/{id_servicio}',['as'=>'cotizar.agregar','uses'=>'ReservarController@agregarServicio']);
+
 });
 /*Route::get('/', function () {
 	return redirect()->route('auth.login');

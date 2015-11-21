@@ -29,5 +29,10 @@ class Cotizaciones extends Model
         return $this->belongsTo(Cliente::class,'cliente_id');
     }
 
+    public function servicios()
+    {
+        return $this->belongsToMany(Servicios::class,'cotizaciones_servicios','cotizacion_id','servicios_id')->withTimestamps();
+    } 
+
     
 }

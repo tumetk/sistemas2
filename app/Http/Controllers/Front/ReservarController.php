@@ -40,12 +40,12 @@ class ReservarController extends Controller
 
     public function agregarServicio($id_servicio)
     {
-        $cotizacion = Cotizaciones::where('observaciones','like','sin finalizar')->where('cliente_id',1)->first();
+        $cotizacion = Cotizaciones::where('observaciones',0)->where('cliente_id',1)->first();
 
         if($cotizacion == null){
         	$cotizacion = Cotizaciones::create([
         			'cliente_id' => 1 ,
-        			'observaciones' =>'sin finalizar'
+        			'observaciones' => 0,
         		]);
         }
 
@@ -58,12 +58,17 @@ class ReservarController extends Controller
 
     public function confirmarCotizacion()
     {
-    	$cotizacion = Cotizaciones::with('servicios')->where('observaciones','like','sin finalizar')->where('cliente_id',1)->first();
+    	$cotizacion = Cotizaciones::with('servicios')->where('observaciones',0)->where('cliente_id',1)->first();
+	    $total = 0 ;
 
-    	$cotizacion->observaciones = 'finalizada';
-    	$total = 0 ;
-    	foreach ($cotizacion['servicios'] as $servicio) {
-    		$total += $servicio['precio'];
+
+    	if($cotizacion!=null)
+    	{
+    		$cotizacion->observaciones = 1;
+    		$cotizacion->save();
+	    	foreach ($cotizacion['servicios'] as $servicio) {
+	    		$total += $servicio['precio'];
+	    	}
     	}
     	$data= [
     		'session_user' =>$this->SessionUser,

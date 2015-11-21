@@ -16,7 +16,7 @@ class CreateCotizacionTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->integer('cliente_id')->nullable()->unsigned();
-            $table->string('observaciones');
+            $table->integer('observaciones');
         });
 
         Schema::table('cotizaciones', function(Blueprint $table){

@@ -4,11 +4,12 @@
 	<div class="col-lg-12">
 		<div class="panel panel-default">
 			<div class="panel-body">
+				@if($cotizacion != null)
 				<div class="row form-group">
 					<div class="col-lg-12">
 						<div class="form-group">
 							<label>Codigo:</label><input class="form-control" disabled="true" value="{{$cotizacion->id}}">
-							<label>Observaciones:</label><input disabled="true" class="form-control" value="{{$cotizacion->observaciones}}">
+							
 						</div>
 					</div>
 				</div>
@@ -41,6 +42,15 @@
 					</div>
 				</div>
 			</div>
+			@else
+			<div class="row">
+					<div class="col-lg-12 text-center">
+						<div id="message" class="alert alert-danger">  
+							Cotizacion Vacia
+						</div>
+					</div>
+				</div>
+			@endif
 		</div>
 	</div>
 </div>

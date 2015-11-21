@@ -23,7 +23,7 @@ Route::group(['prefix' => 'cart','namespace' =>'Front'],function(){
 	Route::post('deleteAll',['as'=>'shoppingCart.deleteAll','uses'=> 'ShoppingCartController@deleteAll']);
 });
 
-Route::get('/',['as'=>'cotizar' ,'namespace'=>'Front', 'uses'=>'Front\CotizarController@cotizarServicesIndex']);
+
 
 Route::group(['prefix' =>'productos','namespace'=>'Front'],function()
 {

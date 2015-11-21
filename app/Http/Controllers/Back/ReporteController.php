@@ -17,7 +17,7 @@ use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Faker\Factory as Faker;
 use Illuminate\Http\Request;
-
+use User;
 class ReporteController extends Controller
 {
     public function __construct()
@@ -29,6 +29,7 @@ class ReporteController extends Controller
     public function index(Request $request)
     {
         $documentos = DocumentoPago::with('cliente');
+
         $searchFechaInicio = $request->input('fecha_inicio');
 		$searchFechaFin    = $request->input('fecha_fin');
     	if ($searchFechaInicio && $searchFechaFin) 

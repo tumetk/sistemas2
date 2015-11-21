@@ -6,7 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Almacen;
 use App\Models\Cliente;
-use User;
+use App\User;
 class Pedidos extends Model 
 {
     

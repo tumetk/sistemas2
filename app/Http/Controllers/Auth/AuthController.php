@@ -25,9 +25,15 @@ class AuthController extends Controller
             'email'    => Request::input('email'),
             'password' => Request::input('password')
         ];
-        if ($this->service->authenticate($data))
-            return redirect()->route('productos');
-        else 
-            return redirect()->back()->with('status', trans('messages.login'));
+        if ($this->service->authenticate($data)){
+            $user = $this->service->getSessionData();
+            if($user->tipo == 2){
+                return redirect()->route('productos');
+            }
+            else{
+                return redirect()->route('reportes');
+            }
+        }else 
+            return redirect()->back()->with('status', trans('Datos Incorrectos'));
     }
 }

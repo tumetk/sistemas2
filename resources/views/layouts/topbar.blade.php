@@ -12,12 +12,14 @@
 		</ul>
 		<!-- /.dropdown-user -->
 	</li>
+	@if($session_user->tipo == 2)
 	<li class="">
-		<a  href="{{route('carrito',['id'=>1])}}">
+		<a  href="{{route('carrito',['id'=>$session_user->id])}}">
 			<i class="fa fa-shopping-cart fa-fw"></i> 
 			
 		    <i class="fa fa-caret-down"></i>
 		</a>
 	</li>
+	@endif
 	<!-- /.dropdown -->
 </ul>

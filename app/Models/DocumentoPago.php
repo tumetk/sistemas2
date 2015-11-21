@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Reservas;
 use App\Models\Pedidos;
 use App\Models\Cliente;
-use User;
+use App\User;
 class DocumentoPago extends Model 
 {
     

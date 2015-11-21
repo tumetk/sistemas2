@@ -7,7 +7,7 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href={{route('productos')}}>Car Wash</a>
+		<a class="navbar-brand" href="#">Car Wash</a>
 	</div>
 	<!-- /.navbar-header -->
 

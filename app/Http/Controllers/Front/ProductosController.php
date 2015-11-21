@@ -11,6 +11,7 @@ use App\Models\Proveedores;
 use App\Models\Reservas;
 use App\Models\Servicios;
 use Validator;
+use Auth;
 use App\Services\AuthService;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -28,7 +29,8 @@ class ProductosController extends Controller
     }
     public function index()
     {
-
+        
+        
         $productos = Productos::with('proveedores')->get();
         $data = [
             'session_user' => $this->SessionUser,
@@ -56,7 +58,7 @@ class ProductosController extends Controller
     
 
 
-    public function agregarCarrito($id_producto ,$id_proveedor,$cliente_id,Request $request)
+    public function agregarCarrito($id_producto ,$id_proveedor,Request $request)
     {
         
 
@@ -76,6 +78,7 @@ class ProductosController extends Controller
 
         $producto->stock = $producto->stock - $cantidad;
         $producto->save();
+        $cliente_id = Auth::user()->id;
         $pedido = Pedidos::where('cliente_id',$cliente_id)->where('confirmado',0)->first();
 
         if( $pedido == NULL){

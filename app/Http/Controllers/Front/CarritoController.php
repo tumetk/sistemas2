@@ -17,12 +17,15 @@ use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Faker\Factory as Faker;
 use Illuminate\Http\Request;
+use Auth;
 
 class CarritoController extends Controller
 {
     
-	public function index($cliente_id)
+	public function index()
 	{
+		
+		$cliente_id =  Auth::user()->id;
 		$pedido = Pedidos::with('productos')->where('confirmado',0)->where('cliente_id',$cliente_id)->first();
 
 		$data = [
@@ -64,8 +67,8 @@ class CarritoController extends Controller
 		{
 			$pedido->productos()->detach($id_producto);
 		}
-		
-		return redirect()->route('carrito',['id'=>$request->input('cliente')])->with('mensaje_exito','Producto eliminado del carrito');
+		$cliente_id =  Auth::user()->id;
+		return redirect()->route('carrito',['id'=>$cliente_id])->with('mensaje_exito','Producto eliminado del carrito');
 
 	}
 
@@ -75,11 +78,11 @@ class CarritoController extends Controller
 
 		$pedido->confirmado = 1 ;
 		$pedido->save();
-
+		$cliente_id = Auth::user()->id;
 		$documento = DocumentoPago::create([
 				'pedido_id' => $pedido->id,
 				'reserva_id' => null,
-				'cliente_id' => 1 ,
+				'cliente_id' => $cliente_id ,
 				'total'      => $pedido->total,
 				'subtotal'   => $pedido->total/ 1.19,
 				'igv'        =>$pedido->total *0.19 / 1.19,

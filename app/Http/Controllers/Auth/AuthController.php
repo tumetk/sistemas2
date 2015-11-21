@@ -26,7 +26,7 @@ class AuthController extends Controller
             'password' => Request::input('password')
         ];
         if ($this->service->authenticate($data))
-            return redirect()->route('admin.index');
+            return redirect()->route('productos');
         else 
             return redirect()->back()->with('status', trans('messages.login'));
     }

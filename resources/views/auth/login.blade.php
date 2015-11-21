@@ -8,7 +8,7 @@
         <meta name="author" content="">
 
         <title>
-            Backend Pacifico
+           Car Wash Xteam
         </title>
 
         <!-- Bootstrap Core CSS -->

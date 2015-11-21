@@ -17,7 +17,7 @@ use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Faker\Factory as Faker;
 use Illuminate\Http\Request;
-
+use Auth;
 class ReservarController extends Controller
 {
     public function __construct()
@@ -40,7 +40,8 @@ class ReservarController extends Controller
 
     public function agregarServicio($id_servicio)
     {
-        $cotizacion = Cotizaciones::where('observaciones',0)->where('cliente_id',1)->first();
+        $cliente_id = Auth::user()->id;
+        $cotizacion = Cotizaciones::where('observaciones',0)->where('cliente_id',$cliente_id)->first();
 
         if($cotizacion == null){
         	$cotizacion = Cotizaciones::create([
@@ -58,7 +59,8 @@ class ReservarController extends Controller
 
     public function confirmarCotizacion()
     {
-    	$cotizacion = Cotizaciones::with('servicios')->where('observaciones',0)->where('cliente_id',1)->first();
+    	$cliente_id = Auth::user()->id;
+        $cotizacion = Cotizaciones::with('servicios')->where('observaciones',0)->where('cliente_id',$cliente_id)->first();
 	    $total = 0 ;
 
 

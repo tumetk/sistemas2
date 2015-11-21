@@ -17,6 +17,16 @@ class UserTableSeeder extends Seeder
             'name'       => 'admin',
             'email'      => 'admin@admin.com',
             'password'   => bcrypt('secret'),
+            'tipo'       => 1 ,
+            'created_at' => date('y-m-d-h-i-s',time())
+        ]);
+
+        DB::table('users')->insert([
+            'name'       => 'admin',
+            'email'      => 'franco.tume@tektonlabs.com',
+            'password'   => bcrypt('secret'),
+            'tipo'       => 2 ,
+            'nombre'     => 'tume',
             'created_at' => date('y-m-d-h-i-s',time())
         ]);
 

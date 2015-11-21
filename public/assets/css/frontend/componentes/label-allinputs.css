@@ -1,0 +1,56 @@
+/***** Label+AllInput ********/
+.forinput{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    color:#646464;
+    font-family: 'Arial';
+}
+.forradios{
+    font-size: 12px;
+    font-weight: 400;
+    color:#0596D0;
+}
+/***** Label + InputText ********/
+.forinput + input[type="text"]{
+    width: 100%;
+    font-size: 12px;
+}
+/***** Label + InputEmail ********/
+.forinput + input[type="email"]{
+    width: 100%;
+    font-size: 12px;
+}
+/***** Label + InputDate********/
+.forinput + input[type="date"]{
+    width: 100%;
+    font-size: 12px;
+}
+/***** Label + Select ********/
+.forinput + .select select{
+    width: 100%;
+    font-size: 12px;
+}
+/***** Label + 2InputRadio ********/
+#grupoCliente-label {
+    margin-left: 35px;
+}
+
+#grupoCliente-no-label {
+    margin-left: 20px;
+}
+
+#grupoCliente-message-error {
+    margin-left: 10px;
+}
+
+.forradios ~ .radio .radio-text{
+
+}
+.radio .radio-button::after{
+    top:2px;
+}
+.radio input[type="radio"]:checked + .radio-button::before{
+    top:5px;
+}

@@ -1,0 +1,448 @@
+/***** Modificadores para textos ********/
+/*
+Red #EC2227
+Celeste #0596D0
+Naranga #F86400
+
+*/
+.mod-message-min{
+    height: 12px;
+}
+.mod-text-9
+,.mod-text-10
+,.mod-text-11
+,.mod-text-12
+,.mod-text-13
+,.mod-text-14
+,.mod-text-15
+,.mod-text-16
+,.mod-text-17
+,.mod-text-18{
+    font-weight: 400;
+	font-family: 'Arial';
+    color: #646464;
+}
+.mod-text-9{
+    font-size: 9px;
+}
+.mod-text-10{
+    font-size: 10px;
+}
+.mod-text-11{
+    font-size: 11px;
+}
+.mod-text-12{
+    font-size: 12px;
+}
+.mod-text-13{
+    font-size: 13px;
+}
+.mod-text-14{
+    font-size: 14px;
+}
+.mod-text-15{
+    font-size: 15px;
+}
+.mod-text-16{
+    font-size: 16px;
+}
+.mod-text-17{
+    font-size: 17px;
+}
+.mod-text-18{
+    font-size: 18px;
+}
+
+.mod-question{
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+}
+
+
+p.mod-cotizador {
+	font-weight: 400;
+	font-size: 18px;
+	font-family: 'Arial-bold';
+	text-align: center;
+}
+p.mod-num-cuotas {
+	font-weight: 400;
+	font-size: 14px;
+	font-family: Foco;
+}
+.mod-boldweight {
+	font-weight: 800;
+}
+p.mod-message{
+	color:#626262;
+	font-size: 12px;
+	text-align: center;
+	margin: 5px;
+}
+
+.align-center{
+    text-align: center
+}
+.align-left{
+    text-align: left;
+}
+.align-right{
+    text-align: right;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+
+p.red-clinicas-title {
+	font-family: "Arial-bold";
+	font-size: 14px;
+}
+p.mod-message.mod-superseparate{
+	margin-bottom: 60px;
+}
+p.mod-message.mod-superseparate + .button-v2{
+	margin-bottom: 80px;
+}
+p.select-dependiente{
+    width: 100px;
+}
+.mod-xx-large{
+	font-size: xx-large;
+	text-align: left;
+}
+.mod-medium{
+	font-size: medium;
+}
+
+/*label.mod-bluecolor{
+	padding-right: 15px;
+}
+*/
+input#titular{
+	font-size: 16px;
+	width: 50px;
+	margin-right: 10px;
+}
+label.mod-small-bold{
+	font-size: small;
+    font-weight: bold;
+}
+h3.resultado-header {
+	width: 259px;
+    text-align: left;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0px;
+    vertical-align: middle;
+    font-family: 'Arial-bold';
+    font-size: 15px;
+    color: #0596D0;
+    letter-spacing: -0.5x;
+}
+h3.from-cotizador {
+	display: inline-block;
+	vertical-align: middle;
+	font-family: 'Arial';
+    font-size: 14px;
+}
+h5.tarifa-modal {
+	float: none;
+	text-decoration: underline;
+	font-weight: 400;
+	padding-bottom: 10px;
+	cursor: pointer;
+}
+h5.prima-anual {
+	display: block;
+	font-weight: 400;
+	padding-bottom: 10px;
+}
+span.min-cotizacion {
+	font-size: 14px;
+    font-family: 'Arial-bold';
+    color: #0596D0;
+}
+p.mod-header-cotizador {
+	font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    font-family: "Arial-bold";
+    color: #0596D0;
+}
+@media screen and (min-width: 48em){
+	h3.from-cotizador {
+		margin-left: 10px;
+	}
+	h3.resultado-header {
+		width: 300px;
+		border-right-style: solid;
+		border-right-color: rgb(229,229,229);
+		border-right-width: 2px;
+	}
+}
+@media screen and (min-width: 35.5em) {
+	h5.tarifa-modal {
+		float: right;
+
+	}
+	h5.prima-anual {
+        float: left;
+	}
+}
+.mod-cobertura {
+	font-family: Foco;
+	font-weight: 400;
+	font-size: 12px;
+}
+h5.more-cobertura {
+	text-decoration: underline;
+	text-align: center;
+	font-family: "Arial";
+    font-size: 11px;
+    font-weight: 400;
+    color: #0596D0;
+}
+span.asegurado {
+	margin-right: 2px;
+}
+h6.detalles{
+	margin: 0px;
+    font-weight: 200;
+    font-family: "Arial";
+    font-size: 9px;
+    color: #646464;
+}
+#sin_familiar {
+	font-family: "Arial";
+    font-size: 12px;
+	color: #00AF2C;
+	font-weight: 400;
+}
+.mod-field {
+	font-size: 12px;
+    font-family: "Arial";
+    color: #0596D0;
+    padding-right: 25px;
+}
+.name_product{
+    border-right: 1px solid #0596D0;
+    padding-right: 12px;
+        margin-right: 5px;
+}
+.message_product {
+	font-family: 'Arial';
+    font-size: 14px;
+    font-weight: 400;
+    vertical-align: middle;
+    letter-spacing: -0.5px;
+}
+.message-cotizar-personalizada {
+	font-family: 'Arial';
+    font-size: 12px;
+    font-weight: 400;
+    vertical-align: middle;
+    letter-spacing: -0.5px;
+}
+h3#subtitle_solicitar{
+	text-align: center;
+	font-family: 'Arial';
+	font-size: 14px;
+	font-weight: 400;
+	color: #0075B0;
+	margin-left: 20px;
+}
+h3#subtitle_salud {
+	font-family: "Arial";
+    font-size: 13px;
+    color: #0596D0;
+    letter-spacing: -0.5px;
+}
+p.cobertura-general {
+	font-size: 10px;
+    font-family: "Arial";
+    color: #646464;
+}
+h2.subtitle-cotizacion{
+	font-family: 'Arial-bold';
+	font-size: 24px;
+	color: #F96302;
+}
+
+
+
+
+
+
+
+.mod-orangecolor {
+	color:#F86400;
+}
+.mod-bluecolor{
+    color:#0596D0;
+}   
+.mod-redcolor{
+    color:#EC2227;
+}
+.mod-whitecolor{
+    color:#FFFFFF;
+}
+
+
+
+.mod-orangebackground {
+	background-color:#F86400;
+}
+.mod-bluebackground{
+    background-color:#0596D0;
+}   
+.mod-redbackground{
+    background-color:#EC2227;
+}
+.mod-whitebackground{
+    background-color:#FFFFFF;
+}
+.mod-lightgreybackground{
+    background-color:#F4F4F4;
+}
+.mod-no-margin{
+    margin: 0;
+}
+.mod-normalweight {
+	font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 35.5em) {
+    h6.detalles{
+        font-size: 10px;
+        letter-spacing: -0.5px;
+    }
+    
+    .mod-field {
+        padding-right: 0;
+    }
+	label.titular {
+		display: block;
+		padding-bottom: 10px;
+	}
+	input#titular {
+		font-size: 12px;
+		width: 40px;
+	}
+    p.select-dependiente{
+        width: 65px;
+        font-size: 12px;
+    }
+    h3.resultado-header{
+        
+    }
+}
+hr.plan-header {
+	display: none;
+}
+
+@media screen and (max-width: 35.5em) {
+	hr.plan-header {
+		display: block;
+		margin: 0px 45px 0px -5px;
+	}
+
+}
+
+@media screen and (max-width: 480px) {
+    p.mod-message{
+    	margin: 20px 5px;
+    }
+    .mod-text-titular{
+        font-size: 13px;
+    }
+    p.mod-cotizador {
+		font-size: 18px;
+        vertical-align: top;
+        margin-top: 3px;
+	}
+	hr.plan-header {
+		display: block;
+		margin: 0px 45px 0px -5px;
+	}
+	span.deducible-resultado-menor {
+		display: block;
+	}
+}
+@media screen and (max-width: 800px) {
+	span.detalles-cuota {
+		display: none;
+	}
+}
+@media screen and (max-width: 320px) {
+	h3.from-cotizador {
+		font-size: 14px;
+		margin-top: 6px;
+	}
+	h3.resultado-header {
+		font-size: 14px;
+		padding-bottom: 5px;
+	}
+	span.asegurado {
+		margin-right: 2px;
+		font-size: 14px;
+	}
+	p.mod-deducible {
+		font-weight: 600;
+		font-size: 13px;
+		font-family: Foco;
+		text-align: center;
+		margin: 0px;
+    	padding: 5px 22px 5px 22px;
+	}
+	h5.prima-anual {
+		font-weight: 400;
+	}
+	p.mod-num-cuotas {
+		margin-bottom: 0px;
+	}
+}
+
+@media screen and (min-width:48em) {
+}
+@media screen and (min-width:64em) {
+    p.mod-message.mod-superseparate{
+	    margin-bottom: 200px;
+    }
+
+}
+.modal-monto,.modal-asegurado-info {
+	font-family: 'Arial';
+    font-size: 14px;
+    color: #646464;
+    text-align: center;
+}
+h3#nombre_plan {
+	font-family: 'Arial-bold';
+    font-size: 15px;
+	margin: 30px 0px;
+}
+h2#tarifa_asegurado_title_modal {
+	margin-top: -3px;
+    padding-bottom: 9px;
+    font-family: 'Arial-bold';
+    font-size: 24px;
+}

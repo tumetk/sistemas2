@@ -1,0 +1,115 @@
+
+.button {
+    position: relative;
+    font-size: 15px;
+    background-color: #00AF2C;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 75px 15px 30px;
+    color: #FFF;
+    font-weight: 800;
+}
+.button-v2 {
+    position: relative;
+    font-size: 15px;
+    background-color: #00AF2C;
+    border: none;
+    border-radius: 5px;
+    padding: 13px;
+    color: #FFF;
+    font-weight: 800;
+    text-decoration: none;
+    text-align: center;
+    outline: none;
+}
+.button:after {
+    content: '';
+    position: absolute;
+    right: 21px;
+    border: 8px solid transparent;
+    border-left: 8px solid #FFF;
+}
+.button-cotizar {
+    font-family: Foco;
+    padding: 26px;
+    padding-top: 8px;
+    padding-bottom: 29px;
+}
+.button-cotizar:after {
+    content: '';
+    border: 10px solid transparent;
+    border-top: 10px solid #FFF;
+    position: absolute;
+    right: calc(50% - 10px);
+    bottom: 0;
+}
+.button-familiar {
+    width: 150px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Foco;
+    background-color: #0596D0;
+    padding: 10px 20px 10px 0px;
+    margin-left: 25px;
+}
+.button-familiar:after {
+    content: '+';
+    border: 0;
+    margin: 10px;
+    font-size: x-large;
+    top: -6px;
+    right: 2px;
+}
+.cotizador-options-movil > button {
+    display: inline-block;
+}
+@media screen and (max-width:360px) {
+    .button-cotizar:after {
+        border: 8px solid transparent;
+        border-top: 8px solid #FFF;
+    }
+    .button-cotizar {
+	    padding-top: 6px;
+        padding-bottom: 24px;
+        width: 100%;
+    }
+    .button-familiar {
+        width: 100%;
+        padding: 15px 20px 15px 0px;
+        margin-left: 0;
+    }
+    .button-familiar:after {
+        top: -1px;
+    }
+}
+@media screen and (max-width:48em) {
+    .cotizador-options-movil{
+        margin: 0px 10px;
+        margin-top: -10px;
+    }
+    .button-movil {
+        width: 32%;
+        padding: 10px 5px;
+        font-size: 10px;
+        font-weight: 400;
+        font-family: Foco;
+        background-color: #0596D0;
+        border: none;
+        border-radius: 5px;
+        color: #FFF;
+        height: 55px;
+        display: inline-block;
+        vertical-align: middle;
+        vertical-align: -webkit-baseline-middle;
+        text-align: center;
+        cursor: pointer;
+        letter-spacing: -0.5px;
+    }
+}
+.solicitar {
+    cursor: pointer;
+}
+.button-regresar-modal {
+    font-family: Foco;
+    padding: 15px 80px;
+}

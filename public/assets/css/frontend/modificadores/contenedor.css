@@ -1,0 +1,246 @@
+/***** Modificaciones sencillos para un contenedor ********/
+.mod-centerhorizontal {
+    margin: 0 auto;
+    display: block;
+}
+.mod-underline{
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 20px;
+}
+.mod-separate{
+    margin-bottom: 14px;
+}
+.mod-separate-lg{
+    margin-bottom: 40px;
+}
+.mod-display-inline-table{
+    display: inline-table;
+}
+.mod-ever-fifty{
+    width: 50%;
+    display: inline-block;
+}
+.mod-no-border{
+    border: none!important;
+}
+.mod-separate-lg-top{
+    margin-top: 40px;
+}
+.mod-noresponsive{
+    display: none;
+}
+.mod-fontfoco{
+    font-family: Foco;
+}
+.mod-text-center{
+    text-align: center;
+}
+.mod-separate-button {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+.mod-separate-xl{
+    margin-bottom: 75px;
+}
+/*.fix-float:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}*/
+
+.fix-float:after{
+	clear: both;
+}
+.fix-float:after{
+    content: " ";
+    display: table;
+}
+.fix-float:before{
+    content: " ";
+    display: table;
+}
+
+ div.dependiente{
+        padding: 5px 10px;
+        font-size: 13px;
+     display: inline-block;
+    }
+
+
+@media screen and (min-width:35.5em) {
+    .fix-grid {
+    /*    font-size: 0;*/
+    }
+    div.dependiente{
+        font-size: 17px;
+    
+}
+    .fix-wordsize {
+        font-size: initial;
+    }
+
+    .mod-separateleft {
+        padding-left: 15px;
+        box-sizing: border-box;
+    }
+}
+@media screen and (min-width:48em) {
+}
+@media screen and (min-width:64em) {
+        .mod-noresponsive{
+            display: block;
+        }
+        .mod-responsive-only {
+            display: none;
+        }
+}
+@media screen and (min-width:80em) {
+
+}
+div.solicitar-seguro {
+    text-align: center;
+    margin: 10px;
+}
+div.agregar_familiar {
+    display: block;
+    cursor: pointer;
+    vertical-align: middle;
+    background-image: url('../../../../assets/img/cotizadores/agregar_familiar.png');
+    width: 154px;
+    height: 36px;
+    margin: 10px;
+}
+@media screen and (min-width: 48em) {
+    div.agregar_familiar{
+        margin: 0px;
+        display: inline-block;
+    }
+}
+div.more-cobertura {
+    padding: 10px;
+    vertical-align: middle;
+    margin-top: 10px;
+}
+div.cotizador-options {
+    width: 100%;
+    text-align: center;
+    font-family: Arial;
+    font-size: 11px;
+    color: #646464;
+    margin-bottom: 20px;
+}
+div.cotizador-option {
+    display: inline-block;
+}
+div.cotizador-opt {
+    width: 25%;
+    text-align: center;
+    display: inline;
+    padding: 12px;
+}
+div.cotizador-option > span {
+    cursor: pointer;
+}
+div.plan-header {
+    cursor: pointer;
+    background-color: rgb(244,244,244);
+    border-color: rgb(229,229,229);
+    border-width: 1px;
+    border-style: solid;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+@media screen and (max-width: 63.85em) {
+    body {
+        padding: 0px 20px;
+    }
+    div.plan-header {
+        padding-left: 15px;
+    }
+}
+div.cuota-group{
+    border-style: groove;
+    border-width: 1px;
+    border-color: rgb(224,224,224);
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: -1px;
+}
+div.cuota-1 {
+    width: 58%;
+    display: inline-block;
+    vertical-align: middle;
+}
+div.cuota-2 {
+    width: 42%;
+    display: inline-block;
+    vertical-align: middle; 
+}
+div.resultados-1-2 {
+    width: 50%;
+    display: inline-block;
+}
+div.modal-resultado {
+    border-style: groove;
+    border-width: 1px;
+    border-color: rgb(224,224,224);
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: -1px;
+    /*height: 50px;*/
+}
+div.modal-resultado-header {
+    text-align: center;
+    background-color: rgb(244,244,244);
+    width: 100%;
+    border-style: groove;
+    border-width: 1px;
+    border-color: rgb(224,224,224);
+    margin-top: -1px;
+    height: 50px;
+}
+div.cotizador-options-movil {
+   display: none;
+}
+@media screen and (max-width: 800px) {
+    div.cuota-group {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+    div.cuota-1 {
+        width: 40%;
+    }
+    div.cuota-2 {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 480px) {
+    div.cuota-group {
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+    }
+    div.cuota-1 {
+        width: 100%;
+        display: block;
+    }
+    div.cuota-2 {
+        width: 100%;
+        display: block;
+    }
+}
+@media screen and (max-width: 48em) {
+    div.cotizador-options {
+        display: none;
+    }
+    div.cotizador-options-movil {
+        display: block;
+    }
+}
+div.mod-separate-button-modal {
+    margin-top: 30px;
+}

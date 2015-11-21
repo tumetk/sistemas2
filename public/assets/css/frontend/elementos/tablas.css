@@ -1,0 +1,156 @@
+/***** Tablas ********/
+.table-1 > .u1-1{
+    width:100%;
+}
+.table-2  > .u2-2{
+    width:100%;
+}
+.table-2  > .u1-2{
+    width:50%;
+}
+.u1-1,.u1-2,.u2-2{
+  outline: 1px solid rgb(224,224,224);
+  float:left;
+}
+.table-1:after,.table-2:after{
+	clear: both;
+}
+.table-1:after,.table-2:after{
+    content: " ";
+    display: table;
+}
+.table-1:before,.table-2:before{
+    content: " ";
+    display: table;
+}
+.column-content{
+    padding:10px 30px;
+}
+.column-content.mod-tipo-precio{
+    padding:10px 10px;
+}
+.column-title {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 13px;
+    font-family: 'Arial';
+    font-weight: 800; 
+}
+.column-text{
+    width: calc(58% - 4px);
+    display: inline-block;
+    vertical-align: middle;
+}
+.column-price{
+	width: calc(42% - 4px);
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+
+}
+
+.column-text > p{
+    text-align: left;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+.column-price > p{
+    text-align: right;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.mod-tipo-precio .column-text{
+    width: 100%;
+    display: block;
+    vertical-align: middle;
+}
+
+.mod-tipo-precio .column-price{
+	width: 100%;
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+    margin: 5px 0px;
+
+}
+.mod-tipo-precio .column-text > p{
+    text-align: center;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+.mod-tipo-precio .column-price > p{
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin: 0;
+}
+
+
+.table-coberturas-generales .column-text {
+        float: left;
+        margin-top: 8px;
+    }
+.table-coberturas-generales .column-price {
+        float: right;
+    }
+.mod-table-responsive{
+    
+}
+.table-no-border{
+     outline: none;
+}
+@media screen and (max-width:48em) {
+    
+    .mod-table-responsive .table-coberturas-generales .column-text > p{
+        text-align: center;
+    }
+    .mod-table-responsive .table-coberturas-generales .column-price > p{
+        text-align: center;
+        margin: 5px 0;
+    }
+    
+    .mod-table-responsive .table-coberturas-generales .column-text{
+        width: 100%;
+         margin-top: 0px;
+    }
+    .mod-table-responsive .table-coberturas-generales .column-price{
+        width: 100%;
+    }
+    
+    .mod-table-responsive .mod-break-md{
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+    .mod-table-responsive .text-transform-de:before {
+        content: '';
+        font-size: 12px;
+        display: block;
+    }
+    .mod-table-responsive .text-transform-de:after {
+        content: 'De';
+        font-size: 12px;
+    }
+    .mod-table-responsive .text-transform-de{
+        width: 0px !important;
+        font-size: 0px;
+        overflow: hidden;
+    }
+    .mod-table-responsive .column-text > p{
+        display: none;
+    }
+    .mod-table-responsive .column-text > p.text-movil{
+        display: block;
+        text-align: center;  
+    }
+    
+}
+
+
+
+
+/*
+@media only screen and (max-width: 703px) {
+  .c.u,.c.d,.c.t{width:100%!important;}
+}
+*/

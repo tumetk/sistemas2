@@ -1,0 +1,18 @@
+/***** Elementos ********/
+@import url(button.css);
+@import url(select.css);
+@import url(input.css);
+@import url(checkbox.css);
+@import url(title.css);
+@import url(message.css);
+@import url(datepicker.css);
+@import url(tablas.css);
+
+.form-element-wrapper {
+    margin: 0px;
+}
+@media screen and (min-width: 35.5em){
+    .form-element-wrapper {
+        margin: 0px 20px;
+    }
+}

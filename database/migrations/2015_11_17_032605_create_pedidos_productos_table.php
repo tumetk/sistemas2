@@ -19,6 +19,8 @@ class CreatePedidosProductosTable extends Migration
             $table->integer('pedido_id')->nullable()->unsigned();
             $table->integer('cantidad');
             $table->float('total');
+            $table->string('descripcion');
+            $table->string('url');
         });
 
         Schema::table('pedidos_productos_almacen',function(Blueprint $table){

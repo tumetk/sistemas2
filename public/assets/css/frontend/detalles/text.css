@@ -1,0 +1,37 @@
+h2.det-info-product{
+    margin-top: 30px;
+    margin-bottom: 7px;
+}
+.step-header{
+    left: 0;
+    position: absolute;
+}
+
+.det-short-input {
+    font-size: 15px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.tooltip-question{
+    width: 15px;
+    height: 15px;
+    background-image: url(../../../img/cotizadores/icon-question.png);
+    display: inline-block;
+}
+.tool{
+    width: 50px;
+    background-color: aqua;
+    display: inline-block;
+}
+.ui-helper-hidden-accessible{
+    display: none;
+}
+@media screen and (min-width:48em) {
+.det-viajes-num-dias{
+    line-height: 75px;
+    display: block;
+    margin-bottom: -20px;
+    margin-left: 10px;
+}
+}

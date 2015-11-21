@@ -33,6 +33,16 @@ Route::group(['prefix' =>'productos','namespace'=>'Front'],function()
 
 });
 
+Route::group(['prefix'=>'carrito', 'namespace' =>'Front'],function(){
+	Route::post('/eliminar/{id_producto}/{id_pedido}',['as'=>'carrito.eliminar','uses'=>'CarritoController@eliminarProducto']);
+	Route::get('/{id}',['as'=>'carrito','uses'=>'CarritoController@index']);
+	Route::post('/confirmar/{id_pedido}',['as'=>'carrito.confirmar','uses'=>'CarritoController@confirmar']);
+});
+
+Route::group(['prefix'=> 'reportes','namespace' =>'Back'],function(){
+	Route::get('/',['as'=>'reportes','uses'=>'ReporteController@index']);
+	Route::get('/{id}',['as'=>'reporte.select','uses'=>'ReporteController@select']);
+});
 /*Route::get('/', function () {
 	return redirect()->route('auth.login');
 });*/

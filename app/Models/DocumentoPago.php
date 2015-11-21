@@ -24,7 +24,7 @@ class DocumentoPago extends Model
      *
      * @var array
      */
-    protected $fillable = ['igv', 'subtotal', 'total','reserva_id','pedido_id'];
+    protected $fillable = ['igv', 'subtotal', 'total','reserva_id','pedido_id','cliente_id'];
 
     public function reservas()
     {

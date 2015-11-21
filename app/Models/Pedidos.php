@@ -27,7 +27,7 @@ class Pedidos extends Model
 
     public function productos()
     {
-        return $this->belongsToMany(Almacen::class, 'pedidos_productos_almacen', 'pedido_id', 'producto_almacen_id')->withPivot('cantidad','total')->withTimestamps();
+        return $this->belongsToMany(Almacen::class, 'pedidos_productos_almacen', 'pedido_id', 'producto_almacen_id')->withPivot('cantidad','total','descripcion','url')->withTimestamps();
     }
 
     public function cliente()

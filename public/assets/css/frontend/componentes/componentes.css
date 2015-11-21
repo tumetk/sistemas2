@@ -1,0 +1,19 @@
+/***** Conjuntos ********/
+
+@import url(label-allinputs.css);
+@import url(card.css);
+@import url(overlay.css);
+@media screen and (min-width:35.5em) {}
+@media screen and (min-width:48em) {
+    .component-wrapper > .card-plan {
+        margin: 0px 20px;
+    }
+    .component-wrapper:first-child > .card-plan {
+        margin: 0px 40px 0px 0px;
+    }
+    .component-wrapper:last-child  > .card-plan {
+        margin: 0px 0px 0px 40px;
+    }
+}
+@media screen and (min-width:64em) {}
+@media screen and (min-width:80em) {}

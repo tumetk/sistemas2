@@ -1,0 +1,139 @@
+.menu{
+	list-style: outside none none;
+	margin: 0px auto;
+	padding: 0px;
+	width: 100%;
+	background-color: transparent;
+	height: 33px;
+}
+
+
+.menu-container{
+	display: block;
+	height: 74px;
+}
+
+.submenu{
+	padding: 0px 0px;
+	margin: -2px 0px 0px 0px;
+	display:none;
+	list-style: outside none none;
+	background-color: transparent;
+	background-image: url('../../../img/menu/menu-fondo-1.png');
+	background-repeat: no-repeat;
+	height: 41px;
+	width: 1024px;
+	position: absolute;
+	top: 36px;
+	left: 0px;
+}
+
+.sub-menu{
+	font-size: 13px;
+	color: #FFFFFF;
+	float: left;
+	margin-top: 2px;
+}
+.selectedMenu{
+	background-color: #FFFFFF;
+	color: #00A6D8;
+	border-bottom: 3px solid #00A6D8;
+	border-collapse: collapse;
+}
+.sub-menu:hover ,.selectedMenu{
+	background-color: #FFFFFF;
+	color: #00A6D8;
+	border-bottom: 3px solid #00A6D8;
+	border-collapse: collapse;
+}
+
+.sub-menu a{
+	color: inherit;
+	padding: 10px 18px;
+	line-height: 33px;
+}
+
+.linea-menu{
+	width: 1px;
+	height: 21px;
+	background-image: url('../../../img/menu/linea-separador-1.png');
+	float:left;
+	margin-top: 8px;
+}
+
+.first-level-menu{
+	float: left;
+	display: block;
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+}
+
+.menu a{
+	text-decoration: none;
+}
+
+.menu-in{
+	background-color: #FFFFFF;
+	color: #00A6D8;
+	border-bottom: 3px solid #00A6D8;
+	border-collapse: collapse;
+}
+
+.personas{
+	cursor:pointer;
+	background-color: transparent;
+	background-image: url('../../../img/menu/menu_a_Personas.png');
+	width: 185px;
+	height: 33px;
+	margin-left: 4px;
+}
+
+.empresas{
+	cursor:pointer;
+	background-color: transparent;
+	background-image: url('../../../img/menu/menu_a_Empresas.png');
+	width: 186px;
+	height: 33px;
+	margin-left: 5px;
+}
+
+.eps{
+	background-color: transparent;
+	background-image: url('../../../img/menu/menu_a_eps.png');
+	width: 91px;
+	height: 33px;
+	margin-left: 5px;
+}
+
+.contacto{
+	background-color: transparent;
+	background-image: url('../../../img/menu/menu_a_contactanos.png');
+	width: 130px;
+	height: 33px;
+	margin-left: 5px;
+}
+
+.somos-corredores{
+	background-color: transparent;
+	background-image: url('../../../img/header/buttons/boton_somosCorredores.png');
+	width: 135px;
+	height: 33px;
+	float: right;
+}
+
+.personas:hover{
+	background-image: url('../../../img/menu/menu_b_Personas.png');
+}
+
+.empresas:hover{
+	background-image: url('../../../img/menu/menu_b_Empresas.png');
+}
+
+.eps:hover{
+	background-image: url('../../../img/menu/menu_b_eps.png');
+}
+
+.contacto:hover{
+	background-image: url('../../../img/menu/menu_b_contactanos.png');
+}

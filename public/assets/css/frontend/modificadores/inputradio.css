@@ -1,0 +1,36 @@
+/***** Modificaciones para los input text ********/
+.mod-input-center{
+    margin: 0 auto;
+    display: block;
+}
+/***** Modificaciones para los Radio en linea ********/
+.mod-radioinline{
+    width: 100%;
+}
+.mod-radioinline label.forradios {
+    width: calc(50% - 3.5px);
+    display: inline-block;
+}
+.mod-radioinline .radio {
+}
+.mod-radioinline .radio .radio-text {
+	font-size: 15px;
+    font-weight: 400;
+}
+
+/***** Modificaciones para los Radio debajo de su label ********/
+.mod-radiotipo2 {
+	width: 100%;
+    padding-bottom: 1.5px;
+}
+.mod-radiotipo2 label.forradios {
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+}
+.mod-radiotipo2 .radio {
+}
+.mod-radiotipo2 .radio .radio-text {
+	font-size: 12px;
+    font-weight: 400;
+}

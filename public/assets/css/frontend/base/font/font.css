@@ -1,0 +1,29 @@
+@font-face {
+	font-family: 'Foco';
+	src: url('../../../../font/eot/foco-regular-webfont.eot');
+	src: url('../../../../font/eot/foco-regular-webfont.eot#iefix') format('embedded-opentype'),
+		url('../../../../font/Foco_Rg.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Foco-bold';
+	src: url('../../../../font/eot/foco-bold-webfont.eot');
+	src: url('../../../../font/eot/foco-bold-webfont.eot#iefix') format('embedded-opentype'),
+		url('../../../../font/Foco_0.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Arial-bold';
+	src: url('../../../../font/eot/arialbd.eot');
+	src: url('../../../../font/eot/arialbd.eot#iefix') format('embedded-opentype'),
+		url('../../../../font/arialbd.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Arial';
+	src: url('../../../../font/eot/arial.eot');
+	src: url('../../../../font/eot/arial.eot#iefix') format('embedded-opentype'),
+		url('../../../../font/arial.ttf') format('truetype');
+}

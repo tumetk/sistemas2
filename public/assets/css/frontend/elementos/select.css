@@ -1,0 +1,48 @@
+/***** Select ********/
+.select {
+	position: relative;
+
+}
+.select:before{
+    content: '';
+    position: absolute;
+    right: 15px;
+    top: 0;
+    width: 24px;
+    height: 20px;
+    background: rgb(255, 255, 255);
+    pointer-events: none;
+    border-left: 0;
+}
+.select:after{/*Flecha azul del select*/
+    content: '';
+    position: absolute;
+    right: 8px;
+    top: 6px;
+    width: 0px;
+    height: 0px;
+    border: 9px solid rgba(255, 255, 255, 0);
+    border-top: 9px solid #0596D0;
+    pointer-events: none;
+}
+.select select{
+    background-color: #FFF;
+	border: 1px solid #0596D0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    padding-right: 15px;
+}
+
+.select select option[value=""]{
+     color:#aaa;
+}
+
+.message-error-container.select:after {
+    border-top: 9px solid #D90E0D;
+}
+

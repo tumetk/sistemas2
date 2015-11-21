@@ -82,6 +82,9 @@ class UserTableSeeder extends Seeder
             'proveedor_id' => 1,
             'created_at' => date('y-m-d-h-i-s',time()),
             'updated_at' =>date('y-m-d-h-i-s',time()),
+            'url'        => 'imagen.jpg',
+            'descripcion' => 'cera',
+            'stock'      =>10,
         ]);
 
         DB::table('almacen')->insert([
@@ -90,6 +93,9 @@ class UserTableSeeder extends Seeder
             'proveedor_id' => 2,
             'created_at' => date('y-m-d-h-i-s',time()),
             'updated_at' =>date('y-m-d-h-i-s',time()),
+            'url'        => 'imagen.jpg',
+            'descripcion' => 'cera',
+            'stock'      =>10,
         ]);
 
         DB::table('almacen')->insert([
@@ -98,6 +104,9 @@ class UserTableSeeder extends Seeder
             'proveedor_id' => 1,
             'created_at' => date('y-m-d-h-i-s',time()),
             'updated_at' =>date('y-m-d-h-i-s',time()),
+            'url'        => 'imagen.jpg',
+            'descripcion' => 'lavador',
+            'stock'      =>10,
         ]);
 
         DB::table('almacen')->insert([
@@ -106,6 +115,9 @@ class UserTableSeeder extends Seeder
             'proveedor_id' => 2,
             'created_at' => date('y-m-d-h-i-s',time()),
             'updated_at' =>date('y-m-d-h-i-s',time()),
+            'url'        => 'imagen.jpg',
+            'descripcion' => 'lavador',
+            'stock'      =>10,
         ]);
         DB::table('almacen')->insert([
             'precio'  => 10.2,
@@ -113,6 +125,9 @@ class UserTableSeeder extends Seeder
             'proveedor_id' => 1,
             'created_at' => date('y-m-d-h-i-s',time()),
             'updated_at' =>date('y-m-d-h-i-s',time()),
+            'url'        => 'imagen.jpg',
+            'descripcion' => 'silicona',
+            'stock'      =>10,
         ]);
 
         DB::table('almacen')->insert([
@@ -121,6 +136,9 @@ class UserTableSeeder extends Seeder
             'proveedor_id' => 2,
             'created_at' => date('y-m-d-h-i-s',time()),
             'updated_at' =>date('y-m-d-h-i-s',time()),
+            'url'        => 'imagen.jpg',
+            'descripcion' => 'silicona',
+            'stock'      =>10,
         ]);
 
 

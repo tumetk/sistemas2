@@ -1,0 +1,41 @@
+/***** Label+AllInput ********/
+label.forinput{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    color:#646464;
+}
+label.forradios{
+    font-size: 12px;
+    font-weight: 400;
+    color:#0596D0;
+}
+/***** Label + InputText ********/
+label.forinput + input[type="text"]{
+    width: 100%;
+    font-size: 12px;
+}
+/***** Label + Select ********/
+label.forinput + .select select{
+    width: 100%;
+    font-size: 12px;
+}
+/***** Label + 2InputRadio ********/
+#grupoCliente-label {
+    margin-left: 57px;
+}
+
+#grupoCliente-no-label {
+    margin-left: 20px;
+}
+
+label.forradios ~ .radio .radio-text{
+
+}
+.radio .radio-button::after{
+    top:2px;
+}
+.radio input[type="radio"]:checked + .radio-button::before{
+    top:5px;
+}

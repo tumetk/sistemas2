@@ -1,0 +1,29 @@
+/***** Title ********/
+/***** Special ********/
+h2{
+    color: #0596D0;
+    text-align: center;
+    font-family: foco;
+}
+h2 + p,h2 + p + p {
+    color:#626262;
+    font-size: 12px;
+    text-align: center;
+}
+h3{
+	font-family: Foco;
+	font-weight: 400;
+}
+h3 + p{
+    text-align: center;
+}
+h5{
+	margin: 0px;
+    margin-bottom: 10px;
+}
+.header-logo{
+    display: block;
+    width: 156px;
+    margin-right: auto;
+    margin-left: auto;
+}

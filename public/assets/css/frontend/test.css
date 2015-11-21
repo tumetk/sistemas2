@@ -1,0 +1,96 @@
+/***** CSS TEST ********/
+
+
+
+/*    width: 21px;
+    height: 21px;
+    content: 'x';
+    border-radius: 100%;
+    color: #FFF;
+    background-color: #0596D0;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -5px;
+    cursor: pointer;
+    text-align: center;*/
+body{
+
+}
+hr{
+    box-sizing: content-box;
+    height: 0;
+    margin: 0;
+    border: 0;
+    border-bottom: 2px solid #DEDEDE;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.test{
+    left: 50%;
+	top: 50%;
+	position: absolute;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+    width: 310px;
+}
+
+.container {
+    position: relative;
+    margin: 0px;
+}
+.mod-especial-edad:before{
+    content: 'Edad: ';
+}
+.mod-especial-edad:after{
+    content: ' años';
+}
+.container-title {
+    margin-top: 45px;
+    margin-bottom: 10px;
+}
+
+.g-recaptcha-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.g-recaptcha-container {
+    width: 304px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer{
+    width: 100%;
+    background-color: #0175B0;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+
+
+
+@media screen and (min-width:35.5em) {
+    .mod-centerhorizontal {
+        max-width: 680px;
+    }.mod-centerhorizontal.container-small {
+        max-width: 470px;
+    }
+    .container-grupoCliente {
+        margin-bottom: 15px;
+    }
+    .mod-center-cotizador {
+        max-width: 90%;
+    }
+
+}
+@media screen and (min-width:48em) {
+}
+@media screen and (min-width:64em) {
+}
+@media screen and (min-width:80em) {
+}

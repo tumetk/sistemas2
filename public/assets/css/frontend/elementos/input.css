@@ -1,0 +1,53 @@
+/***** Input text ********/
+input[type="text"],input[type="email"],input[type="date"]{
+    border: 1px solid #0596D0;
+    border-radius: 5px;
+    padding: 6px;
+    padding-right: 15px;
+    background-color: #FFF;
+    outline: none;
+}
+
+/***** Input radio ********/
+.radio{    
+    position:relative;
+    text-align: left;
+    height: 20px;
+    cursor: pointer;
+    color:#646464;
+    display: inline-block;
+}
+.radio .radio-button{
+    content: '';
+    position:relative;
+    padding-left: 23px; 
+}
+.radio .radio-button::after{
+    content:'';
+    width:16px;
+    height:16px;
+    border:1px solid;
+    position:absolute;
+    color:#0596D0; 
+    left:0px;
+    top:0px;
+    border-radius:100%;
+    box-sizing:border-box;
+
+}
+.radio input[type="radio"]{
+    display: none;
+}
+.radio input[type="radio"]:checked + .radio-button{
+    color:#0596D0;  
+}
+.radio input[type="radio"]:checked + .radio-button::before{
+    content:'';
+    width:10px;
+    height:10px;
+    position:absolute;
+    background:#424242;
+    left:3px;
+    top:3px;
+    border-radius:100%;
+}

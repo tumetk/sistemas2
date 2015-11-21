@@ -26,6 +26,6 @@ class Almacen extends Model
 
     public function pedidos()
     {
-        return $this->belongsToMany(Pedidos::class,'pedidos_productos_almacen','producto_almacen_id','pedido_id')->withPivot('cantidad','total')->withTimestamps();
+        return $this->belongsToMany(Pedidos::class,'pedidos_productos_almacen','producto_almacen_id','pedido_id')->withPivot('cantidad','total','descripcion','url')->withTimestamps();
     }
 }

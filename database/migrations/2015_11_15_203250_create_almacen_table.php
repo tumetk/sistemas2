@@ -20,6 +20,7 @@ class CreateAlmacenTable extends Migration
             $table->integer('producto_id')->nullable()->unsigned();
             $table->integer('proveedor_id')->nullable()->unsigned();
             $table->string('url');
+            $table->string('descripcion');
 
         });
 

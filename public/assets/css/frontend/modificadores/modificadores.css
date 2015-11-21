@@ -1,0 +1,83 @@
+@import url(contenedor.css);
+@import url(inputradio.css);
+@import url(text.css);
+@import url(error.css);
+@import url(helper.css);
+
+
+@media screen and (min-width:0em) {
+    .mod-hidden-until-xs{
+        display: none;
+    }
+    .mod-hidden-until-sm{
+        display: none;
+    }
+    .mod-hidden-until-md{
+        display: none;
+    }
+    .mod-hidden-until-lg{
+        display: none;
+    }
+    .mod-hidden-until-xl{
+        display: none;
+    }
+    .mod-hidden-since-xs{
+        display: none;
+    }
+}
+@media screen and (min-width:35.5em) {
+    .mod-hidden-until-sm{
+        display: inline;
+        display: initial;
+    }
+    .mod-hidden-until-sm.block{
+        display: inline;
+        display: block;
+    }
+    hr.mod-hidden-until-sm{
+        display: block;
+    }
+    .mod-hidden-since-sm{
+        display: none;
+    }
+}
+@media screen and (min-width:48em) {
+    .mod-hidden-until-md{
+        display: inline;
+        display: initial;
+    }
+    .mod-hidden-until-md.block{
+        display: inline;
+        display: block;
+    }
+    hr.mod-hidden-until-md{
+        display: block;
+    }
+    .mod-hidden-since-md{
+        display: none;
+    }
+}
+@media screen and (min-width:64em) {
+    .mod-hidden-until-lg{
+        display: inline;
+        display: initial;
+    }
+    hr.mod-hidden-until-lg{
+        display: block;
+    }
+    .mod-hidden-since-lg{
+        display: none;
+    }
+}
+@media screen and (min-width:80em) {
+    .mod-hidden-until-xl{
+        display: inline;
+        display: initial;
+    }
+    hr.mod-hidden-until-xl{
+        display: block;
+    }
+    .mod-hidden-since-xl{
+        display: none;
+    }
+}

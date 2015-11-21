@@ -13,7 +13,7 @@
                 
             </li>
             <li>
-                <a href="#"><i class="fa fa-exclamation fa-fw"></i> Cotizacion</a>
+                <a href="{{route('cotizar')}}"><i class="fa fa-exclamation fa-fw"></i> Cotizacion</a>
             </li>                
         </ul>
     </div>

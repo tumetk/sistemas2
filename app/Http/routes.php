@@ -43,6 +43,10 @@ Route::group(['prefix'=> 'reportes','namespace' =>'Back'],function(){
 	Route::get('/',['as'=>'reportes','uses'=>'ReporteController@index']);
 	Route::get('/{id}',['as'=>'reporte.select','uses'=>'ReporteController@select']);
 });
+
+Route::group(['prefix'=>'cotizar','namespace'=>'Front'],function(){
+	Route::get('/',['as'=>'cotizar','uses'=>'ReservarController@index']);
+});
 /*Route::get('/', function () {
 	return redirect()->route('auth.login');
 });*/

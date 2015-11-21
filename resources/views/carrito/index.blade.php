@@ -28,7 +28,8 @@
 					<div class="row form-group">
 						<div class="col-lg-6 text-center">
 							<div class="input-group text-center">
-							 <img src="{{asset('assets/img/'.$producto['proveedores'][0]['pivot']['url'])}}">
+							
+							 <img src="{{asset('assets/img/'.$producto['pivot']['url'])}}" class="img-rounded img-product">
 							</div>
 						</div>
 						<div class="col-lg-6">

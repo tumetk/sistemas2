@@ -5,6 +5,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Cliente;
+use User;
 
 class Cotizaciones extends Model 
 {
@@ -22,11 +23,11 @@ class Cotizaciones extends Model
      *
      * @var array
      */
-    protected $fillable = ['cliente_id', 'observaciones'];
+    protected $fillable = ['cliente_id', 'observaciones','user_id'];
 
     public function cliente()
     {
-        return $this->belongsTo(Cliente::class,'cliente_id');
+        return $this->belongsTo(User::class,'cliente_id');
     }
 
     public function servicios()

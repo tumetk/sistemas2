@@ -79,12 +79,13 @@ class ProductosController extends Controller
         $producto->stock = $producto->stock - $cantidad;
         $producto->save();
         $cliente_id = Auth::user()->id;
-        $pedido = Pedidos::where('cliente_id',$cliente_id)->where('confirmado',0)->first();
+        
+        $pedido = Pedidos::where('user_id',$cliente_id)->where('confirmado',0)->first();
 
         if( $pedido == NULL){
             $pedido = Pedidos::create([
 
-                    'cliente_id' => $cliente_id,
+                    'user_id' => $cliente_id,
                     'total'      => 0 ,
                     'confirmado' => 0,
                 ]);

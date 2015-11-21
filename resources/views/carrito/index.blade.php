@@ -21,7 +21,7 @@
 	<div class="col-lg-12">
 		<div class="panel panel-default">
 			<div class="panel-body">
-				@if($pedido != null)
+				@if($pedido != null && !$pedido['productos']->isEmpty())
 				@foreach($pedido['productos'] as $producto)
 					<form  method="POST" action="{{route('carrito.eliminar',['id_producto'=>$producto->pivot->producto_almacen_id,'id_pedido'=>$producto->pivot->pedido_id])}}"> 
 					<input hidden value="1"  name="cliente"	>

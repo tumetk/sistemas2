@@ -21,15 +21,20 @@ use Auth;
 
 class CarritoController extends Controller
 {
-    
+    public function __construct()
+    {
+        
+        $this->SessionUser = AuthService::getSessionData();
+        
+    }
 	public function index()
 	{
 		
 		$cliente_id =  Auth::user()->id;
-		$pedido = Pedidos::with('productos')->where('confirmado',0)->where('cliente_id',$cliente_id)->first();
+		$pedido = Pedidos::with('productos')->where('confirmado',0)->where('user_id',$cliente_id)->first();
 
 		$data = [
-
+			'session_user' => $this->SessionUser,
 			'pedido'=> $pedido,
 		];
 
@@ -82,7 +87,7 @@ class CarritoController extends Controller
 		$documento = DocumentoPago::create([
 				'pedido_id' => $pedido->id,
 				'reserva_id' => null,
-				'cliente_id' => $cliente_id ,
+				'user_id' => $cliente_id ,
 				'total'      => $pedido->total,
 				'subtotal'   => $pedido->total/ 1.19,
 				'igv'        =>$pedido->total *0.19 / 1.19,

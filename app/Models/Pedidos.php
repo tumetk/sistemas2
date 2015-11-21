@@ -6,7 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Almacen;
 use App\Models\Cliente;
-
+use User;
 class Pedidos extends Model 
 {
     
@@ -23,7 +23,7 @@ class Pedidos extends Model
      *
      * @var array
      */
-    protected $fillable = ['cantidad', 'total','cliente_id','confirmado'];
+    protected $fillable = ['cantidad', 'total','cliente_id','confirmado','user_id'];
 
     public function productos()
     {
@@ -32,6 +32,6 @@ class Pedidos extends Model
 
     public function cliente()
     {
-        return $this->belongsTo(Cliente::class,'cliente_id');
+        return $this->belongsTo(User::class,'cliente_id');
     }
 }

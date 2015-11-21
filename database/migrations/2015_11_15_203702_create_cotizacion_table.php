@@ -15,14 +15,14 @@ class CreateCotizacionTable extends Migration
         Schema::create('cotizaciones', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->integer('cliente_id')->nullable()->unsigned();
+            $table->integer('user_id')->nullable()->unsigned();
             $table->integer('observaciones');
         });
 
         Schema::table('cotizaciones', function(Blueprint $table){
-            $table->foreign('cliente_id')
+            $table->foreign('user_id')
                   ->references('id')
-                  ->on('cliente')
+                  ->on('users')
                   ->onDelete('set null')
                   ->onUpdate('cascade');
         });
@@ -36,7 +36,7 @@ class CreateCotizacionTable extends Migration
     public function down()
     {
         Schema::table('reservas', function(Blueprint $table){
-            $table->dropForeign('reservas_cliente_id_foreign');
+            $table->dropForeign('reservas_user_id_foreign');
         });
         Schema::drop('cotizaciones');
     }

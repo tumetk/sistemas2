@@ -20,7 +20,7 @@ class CreateDocumentoPagoTable extends Migration
             $table->float('total');
             $table->integer('reserva_id')->nullable()->unsigned();
             $table->integer('pedido_id')->nullable()->unsigned();
-            $table->integer('cliente_id')->nullable()->unsigned();
+            $table->integer('user_id')->nullable()->unsigned();
 
         });
 
@@ -36,9 +36,9 @@ class CreateDocumentoPagoTable extends Migration
                   ->on('pedidos')
                   ->onDelete('set null')
                   ->onUpdate('cascade');
-            $table->foreign('cliente_id')
+            $table->foreign('user_id')
                   ->references('id')
-                  ->on('cliente')
+                  ->on('users')
                   ->onDelete('set null')
                   ->onUpdate('cascade');
         });

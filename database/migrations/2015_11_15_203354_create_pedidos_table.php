@@ -16,14 +16,14 @@ class CreatePedidosTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->float('total');
-            $table->integer('cliente_id')->nullable()->unsigned();
+            $table->integer('user_id')->nullable()->unsigned();
             $table->integer('confirmado');
         });
 
         Schema::table('pedidos', function(Blueprint $table){
-            $table->foreign('cliente_id')
+            $table->foreign('user_id')
                   ->references('id')
-                  ->on('cliente')
+                  ->on('users')
                   ->onDelete('set null')
                   ->onUpdate('cascade');
         });
@@ -38,7 +38,7 @@ class CreatePedidosTable extends Migration
     {
         
         Schema::table('pedidos', function(Blueprint $table){
-            $table->dropForeign('pedidos_cliente_id_foreign');
+            $table->dropForeign('pedidos_user_id_foreign');
         });
 
         Schema::drop('pedidos');

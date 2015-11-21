@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Reservas;
 use App\Models\Pedidos;
 use App\Models\Cliente;
-
+use User;
 class DocumentoPago extends Model 
 {
     
@@ -24,7 +24,7 @@ class DocumentoPago extends Model
      *
      * @var array
      */
-    protected $fillable = ['igv', 'subtotal', 'total','reserva_id','pedido_id','cliente_id'];
+    protected $fillable = ['igv', 'subtotal', 'total','reserva_id','pedido_id','user_id'];
 
     public function reservas()
     {
@@ -38,7 +38,7 @@ class DocumentoPago extends Model
 
     public function cliente()
     {
-        return $this->belongsTo(Cliente::class,'cliente_id');
+        return $this->belongsTo(User::class,'cliente_id');
     }
     
 }

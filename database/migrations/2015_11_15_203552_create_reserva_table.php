@@ -16,14 +16,14 @@ class CreateReservaTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->datetime('fecha_hora');
-            $table->integer('cliente_id')->nullable()->unsigned();
+            $table->integer('user_id')->nullable()->unsigned();
             $table->integer('confirmada');
         });
 
         Schema::table('reservas', function(Blueprint $table){
-            $table->foreign('cliente_id')
+            $table->foreign('user_id')
                   ->references('id')
-                  ->on('cliente')
+                  ->on('users')
                   ->onDelete('set null')
                   ->onUpdate('cascade');
         });

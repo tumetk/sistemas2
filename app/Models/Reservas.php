@@ -5,7 +5,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Cliente;
-
+use User;
 class Reservas extends Model 
 {
     
@@ -22,11 +22,11 @@ class Reservas extends Model
      *
      * @var array
      */
-    protected $fillable = ['fecha_hora', 'cliente_id', 'confirmada'];
+    protected $fillable = ['fecha_hora', 'user_id', 'confirmada'];
 
     public function cliente()
     {
-        return $this->belongsTo(Cliente::class,'cliente_id');
+        return $this->belongsTo(User::class,'cliente_id');
     }
 
     public function citas()

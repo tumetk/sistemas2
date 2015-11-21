@@ -21,7 +21,7 @@
 
 		<!-- Custom CSS -->
 		<link href={{asset("assets/startbootstrap-sb-admin-2-1.0.7/dist/css/sb-admin-2.css")}} rel="stylesheet">
-
+		<link href={{asset("assets/css/base.css")}} rel="stylesheet">
 		<!-- Custom Fonts -->
 		<link href={{asset("assets/startbootstrap-sb-admin-2-1.0.7/bower_components/font-awesome/css/font-awesome.min.css")}} rel="stylesheet" type="text/css">
 		<link href={{asset('assets/css/jquery-ui.structure.min.css')}} rel="stylesheet" type="text/css">

@@ -27,7 +27,7 @@
 							<div class="col-lg-4 form-group">
 								<div class="row">
 									<div class="col-lg-12 text-center">
-										<img src="/assests/img/email.png">
+										<img class="img-rounded img-product"src="{{asset('assets/img/'.$provedor->pivot->url)}}">
 									</div>
 								</div>
 								<div class="row">

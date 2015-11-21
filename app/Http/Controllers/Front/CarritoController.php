@@ -41,7 +41,10 @@ class CarritoController extends Controller
 		return view('carrito.index',$data);
 	}
 
-
+	public function rules()
+	{
+		return ['cantidad'=>'required|numeric'];
+	}
 	public function eliminarProducto($id_producto,$id_pedido,Request $request)
 	{
 
@@ -52,8 +55,19 @@ class CarritoController extends Controller
 		$producto = Almacen::find($id_producto);
 		$cantidad = $request->input('cantidad');
 
+		$validator = Validator::make($request->all(), [
+            'title' => 'required|unique:posts|max:255',
+            'body' => 'required',
+        ]);
+
+        
+		$validator = Validator::make(['cantidad'=>$cantidad],$this->rules());
+		if($validator->fails())
+		{
+			return redirect()->route('carrito',['id'=>$this->SessionUser->id])->with('error','El campo es requerido y solo numeros');			
+		}
 		if($cantidad > $producto_pedido->pivot->cantidad || $cantidad <0 ){
-			return redirect()->route('carrito',['id'=>$request->input('cliente')])->with('error','Cantidad a eliminar no valida');			
+			return redirect()->route('carrito',['id'=>$this->SessionUser->id])->with('error','Cantidad a eliminar no valida');			
 		}
 		$producto->stock += $cantidad;
 		$pedido->total -= $cantidad*$producto_pedido->precio;

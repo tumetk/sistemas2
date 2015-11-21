@@ -32,6 +32,7 @@ class ReporteController extends Controller
 
         $searchFechaInicio = $request->input('fecha_inicio');
 		$searchFechaFin    = $request->input('fecha_fin');
+		
     	if ($searchFechaInicio && $searchFechaFin) 
 		{
 			$documentos->where('created_at','>=',$searchFechaInicio);

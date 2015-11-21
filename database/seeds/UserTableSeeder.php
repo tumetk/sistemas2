@@ -33,7 +33,7 @@ class UserTableSeeder extends Seeder
         DB::table('servicios')->insert([
             'detalle'    => 'servicio lavado rapido',
             'precio'     => 100,
-            'url'        => 'lavado.jpg',
+            'url'        => 'lavador.jpg',
             'created_at' => date('y-m-d-h-i-s',time()),
             'updated_at' =>date('y-m-d-h-i-s',time()),
         ]);
@@ -41,7 +41,7 @@ class UserTableSeeder extends Seeder
         DB::table('servicios')->insert([
             'detalle'    => 'servicio lavado completo',
             'precio'     => 100,
-            'url'        => 'lavado.jpg',
+            'url'        => 'lavador.jpg',
             'created_at' => date('y-m-d-h-i-s',time()),
             'updated_at' =>date('y-m-d-h-i-s',time()),
         ]);
@@ -49,7 +49,7 @@ class UserTableSeeder extends Seeder
         DB::table('servicios')->insert([
             'detalle'    => 'servicio lavado basico',
             'precio'     => 100,
-            'url'        => 'lavado.jpg',
+            'url'        => 'lavador.jpg',
             'created_at' => date('y-m-d-h-i-s',time()),
             'updated_at' =>date('y-m-d-h-i-s',time()),
         ]);
@@ -92,7 +92,7 @@ class UserTableSeeder extends Seeder
             'proveedor_id' => 1,
             'created_at' => date('y-m-d-h-i-s',time()),
             'updated_at' =>date('y-m-d-h-i-s',time()),
-            'url'        => 'imagen.jpg',
+            'url'        => 'cera.jpg',
             'descripcion' => 'cera',
             'stock'      =>10,
         ]);
@@ -103,7 +103,7 @@ class UserTableSeeder extends Seeder
             'proveedor_id' => 2,
             'created_at' => date('y-m-d-h-i-s',time()),
             'updated_at' =>date('y-m-d-h-i-s',time()),
-            'url'        => 'imagen.jpg',
+            'url'        => 'cera.jpg',
             'descripcion' => 'cera',
             'stock'      =>10,
         ]);
@@ -114,7 +114,7 @@ class UserTableSeeder extends Seeder
             'proveedor_id' => 1,
             'created_at' => date('y-m-d-h-i-s',time()),
             'updated_at' =>date('y-m-d-h-i-s',time()),
-            'url'        => 'imagen.jpg',
+            'url'        => 'lavador.jpg',
             'descripcion' => 'lavador',
             'stock'      =>10,
         ]);
@@ -125,7 +125,7 @@ class UserTableSeeder extends Seeder
             'proveedor_id' => 2,
             'created_at' => date('y-m-d-h-i-s',time()),
             'updated_at' =>date('y-m-d-h-i-s',time()),
-            'url'        => 'imagen.jpg',
+            'url'        => 'lavador.jpg',
             'descripcion' => 'lavador',
             'stock'      =>10,
         ]);
@@ -135,7 +135,7 @@ class UserTableSeeder extends Seeder
             'proveedor_id' => 1,
             'created_at' => date('y-m-d-h-i-s',time()),
             'updated_at' =>date('y-m-d-h-i-s',time()),
-            'url'        => 'imagen.jpg',
+            'url'        => 'silicona.jpg',
             'descripcion' => 'silicona',
             'stock'      =>10,
         ]);
@@ -146,7 +146,7 @@ class UserTableSeeder extends Seeder
             'proveedor_id' => 2,
             'created_at' => date('y-m-d-h-i-s',time()),
             'updated_at' =>date('y-m-d-h-i-s',time()),
-            'url'        => 'imagen.jpg',
+            'url'        => 'silicona.jpg',
             'descripcion' => 'silicona',
             'stock'      =>10,
         ]);

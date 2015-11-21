@@ -65,8 +65,11 @@ class ProductosController extends Controller
         $producto = Almacen::where('producto_id',$id_producto)->where('proveedor_id',$id_proveedor)->first();
         $cantidad = $request->input('cantidad');
 
-        $validator =  Validator::make(['cantidad'=>$cantidad],$this->rules());
-
+        $validator = Validator::make(['cantidad'=>$cantidad],$this->rules());
+        if($validator->fails())
+        {
+            return redirect()->route('productos.detalle',['id_producto'=>$id_producto,'id_proveedor'=>$id_proveedor])->with('error','Cantidad no Valida');   
+        }
         if($cantidad< 0)
         {
             return redirect()->route('productos.detalle',['id_producto'=>$id_producto,'id_proveedor'=>$id_proveedor])->with('error','Cantidad no Valida');   
@@ -102,7 +105,7 @@ class ProductosController extends Controller
     public function rules()
     {
         return [
-            'cantidad' => 'required|min:1'
+            'cantidad' => 'required|numeric'
         ];
     }
 }

@@ -42,9 +42,7 @@ class CreatePedidosProductosTable extends Migration
      */
     public function down()
     {
-        Schema::table('pedidos_productos_almacen', function(Blueprint $table){
-            $table->dropForeign('pedidos_productos_almacen_producto_id_foreign');
-        });
+       ;
         Schema::drop('pedidos_productos_almacen');
     }
 }

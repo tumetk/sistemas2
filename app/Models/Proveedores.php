@@ -26,6 +26,6 @@ class Proveedores extends Model
 
     public function productos()
     {
-        return $this->belongsToMany(Productos::class,'almacen','proveedor_id','producto_id')->withPivot('stock')->withTimestamps();
+        return $this->belongsToMany(Productos::class,'almacen','proveedor_id','producto_id')->withPivot('stock','precio','url')->withTimestamps();
     }
 }
